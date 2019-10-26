@@ -1,19 +1,7 @@
 var quesions = {
-    que1: anss = {
-        ans1: "true",
-        ans2: "false",
-        ans3: "false"
-    },
-    que2: anss2= {
-        ans1: "true",
-        ans2: "false",
-        ans3: "false"
-    },
-    que3: anss3= {
-        ans1: "true",
-        ans2: "false",
-        ans3: "false"
-    }
+    que1: ["ans1","ans2","ans3"],
+    que2: ["ans1","ans2","ans3"],
+    que3: ["ans1","ans2","ans3"]
   };
 
 
