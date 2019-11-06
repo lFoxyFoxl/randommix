@@ -1,17 +1,17 @@
-var quesions = {
+var quesions = {  //массив с вопросами
 first: ["ans11", "ans2", "ans3"],
 second: ["ans12", "ans2", "ans3"],
 third: ["ans13", "ans2", "ans3"],
 fours: ["ans14", "ans2", "ans3"]
 };
-var endquesions = {};
-function fix(arr){
+var endquesions = {}; //новый массив , в котором строиться рандомизированный массив с тестами
+function fix(arr){  //функция строит новый масив
   var keys = Object.keys(quesions);
   for (let i = 0 ; i < arr.length;i++){
       endquesions[keys[arr[i]]] = quesions[keys[arr[i]]]
   };
 }
-function mix(array) {
+function mix(array) { //создаёт массив на основе которого строиться перемешаный
   var randomquesion;
   var auxiliary;
   var newarr = [];
