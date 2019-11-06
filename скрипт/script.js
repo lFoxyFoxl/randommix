@@ -1,28 +1,39 @@
 var quesions = {
-    que1: ["ans1","ans2","ans3"],
-    que2: ["ans1","ans2","ans3"],
-    que3: ["ans1","ans2","ans3"]
+first: ["ans11", "ans2", "ans3"],
+second: ["ans12", "ans2", "ans3"],
+third: ["ans13", "ans2", "ans3"],
+fours: ["ans14", "ans2", "ans3"]
+};
+var endquesions = {};
+function fix(arr){
+  var keys = Object.keys(quesions);
+  for (let i = 0 ; i < arr.length;i++){
+      endquesions[keys[arr[i]]] = quesions[keys[arr[i]]]
   };
-
-
-  function mix(array) {
-    var randomquesion;
-    var auxiliary;
-    for (var i = 0; i < array.length; i++) {
-        randomquesion = Math.floor(Math.random() * (i + 1)); 
-        auxiliary = array[randomquesion];
-        array[randomquesion] = array[i];
-        array[i] = auxiliary;
-    }
-    return array;
+}
+function mix(array) {
+  var randomquesion;
+  var auxiliary;
+  var newarr = [];
+  for (var i = array.length ; i > newarr.length ; i++) {
+      randomquesion = Math.floor(Math.random() * (array.length - 0) + 0);
+      auxiliary = randomquesion;
+      auxiliary += "";
+      if(newarr.length>=array.length){
+        return fix(newarr);
+      };
+      if (newarr.indexOf(auxiliary)==-1){
+        newarr.push(auxiliary);
+      };
   };
+  return array;
+};
 
-  function auxiliary(array) {
-    return mix(Object.keys(array));
-  };
-  function showlog(array){
-    console.log(array)
-  }
-
-  mixedarray = auxiliary(quesions);
-  showlog(quesions);
+function auxiliary(array) {
+  return mix(Object.keys(array));
+};
+function showlog(array){
+  console.log(array)
+}
+mixedarray = auxiliary(quesions);
+showlog(endquesions);
